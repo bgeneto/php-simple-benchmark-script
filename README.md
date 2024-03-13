@@ -1,6 +1,16 @@
 # Run in Docker example:
 
 ```
+# With Official PHP Docker image:
+docker run -it --rm \
+    --name bench-script \
+    -v "$PWD":/usr/src/myapp \
+    -w /usr/src/myapp \
+    php:8.2-cli \
+    php -dopcache.enable_cli=0 bench.php
+
+# Or... with ClearLinux php-fpm image:
+
 docker run -it --rm \
     -v $PWD:/var/www/html \
     clearlinux/php-fpm \
