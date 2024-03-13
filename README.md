@@ -33,11 +33,9 @@ docker run -it --rm \
 # Run phoronix phpbench test:
 
 ```bash
-wget https://download.pureftpd.org/pub/phpbench/phpbench-0.8.1.tar.gz
-wget https://raw.githubusercontent.com/bgeneto/php-simple-benchmark-script/master/phoronix-phpbench-install.sh
-chmod +x ./phoronix-phpbench-install.sh
-./phoronix-phpbench-install.sh
-cd phpbench-0.8.1/
+wget https://phoronix-test-suite.com/benchmark-files/phpbench-081-patched1.zip
+unzip phpbench-081-patched1.zip
+cd phpbench-0.8.1-patched1/
 docker run -it --rm \
     --name bench-script \
     -v "$PWD":/usr/src/myapp \
