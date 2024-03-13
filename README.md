@@ -33,9 +33,9 @@ docker run -it --rm \
 # Run phoronix phpbench test:
 
 ```bash
-wget https://phoronix-test-suite.com/benchmark-files/phpbench-081-patched1.zip
-unzip phpbench-081-patched1.zip
-cd phpbench-0.8.1-patched1/
+wget https://phoronix-test-suite.com/benchmark-files/phpbench-081-patched2.zip
+unzip ./phpbench-081-patched2.zip
+cd ./phpbench-081-patched2/
 docker run -it --rm \
     --name bench-script \
     -v "$PWD":/usr/src/myapp \
