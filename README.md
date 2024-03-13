@@ -19,6 +19,17 @@ docker run -it --rm \
     clearlinux/php-fpm \
     php -dopcache.enable_cli=0 /var/www/html/bench.php
 ```
+# Run the sergix44 script in Docker instead 
+
+```
+#https://github.com/sergix44/php-benchmark-script
+docker run -it --rm \
+    --name bench-script \
+    -v "$PWD":/usr/src/myapp \
+    -w /usr/src/myapp \
+    php:8.2-cli \
+    curl https://raw.githubusercontent.com/SergiX44/php-benchmark-script/master/bench.php | php -dopcache.enable_cli=0
+```
 
 # Простой скрипт проверки быстродействия PHP
 
