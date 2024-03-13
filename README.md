@@ -1,6 +1,9 @@
 # Run in Docker example:
 
 ```
+git clone https://github.com/bgeneto/php-simple-benchmark-script.git
+cd php-simple-benchmark-script/
+ 
 # With Official PHP Docker image:
 docker run -it --rm \
     --name bench-script \
