@@ -1,3 +1,12 @@
+# Run in Docker example:
+
+```
+docker run -it --rm \
+    -v $PWD:/var/www/html \
+    clearlinux/php-fpm \
+    php -dopcache.enable_cli=0 /var/www/html/bench.php
+```
+
 # Простой скрипт проверки быстродействия PHP
 
 Работает со всеми версиями ПХП: от 4.3 до 8.2
