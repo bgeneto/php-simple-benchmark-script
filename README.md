@@ -1,6 +1,6 @@
 # Run in Docker example:
 
-```
+```bash
 git clone https://github.com/bgeneto/php-simple-benchmark-script.git
 cd php-simple-benchmark-script/
  
@@ -21,7 +21,7 @@ docker run -it --rm \
 ```
 # Run the sergix44 script in Docker instead 
 
-```
+```bash
 #https://github.com/sergix44/php-benchmark-script
 docker run -it --rm \
     --name bench-script \
@@ -29,6 +29,21 @@ docker run -it --rm \
     -w /usr/src/myapp \
     php:8.2-cli \
     curl https://raw.githubusercontent.com/SergiX44/php-benchmark-script/master/bench.php | php -dopcache.enable_cli=0
+```
+# Run phoronix phpbench test:
+
+```bash
+wget https://download.pureftpd.org/pub/phpbench/phpbench-0.8.1.tar.gz
+wget https://raw.githubusercontent.com/bgeneto/php-simple-benchmark-script/master/phoronix-phpbench-install.sh
+chmod +x ./phoronix-phpbench-install.sh
+./phoronix-phpbench-install.sh
+cd phpbench-0.8.1/
+docker run -it --rm \
+    --name bench-script \
+    -v "$PWD":/usr/src/myapp \
+    -w /usr/src/myapp \
+    php:8.2-cli \
+    php -dopcache.enable_cli=0 phpbench.php -i 1000000
 ```
 
 # Простой скрипт проверки быстродействия PHP
