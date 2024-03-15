@@ -1,4 +1,4 @@
-# Run in Docker example:
+# Run via Docker:
 
 ```bash
 git clone https://github.com/bgeneto/php-simple-benchmark-script.git
@@ -30,7 +30,7 @@ docker run -it --rm \
     php:8.2-cli \
     curl https://raw.githubusercontent.com/SergiX44/php-benchmark-script/master/bench.php | php -dopcache.enable_cli=0
 ```
-# Run phoronix phpbench test:
+# Run phoronix phpbench (not working):
 
 ```bash
 wget https://phoronix-test-suite.com/benchmark-files/phpbench-081-patched2.zip
