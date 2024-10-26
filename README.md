@@ -9,15 +9,8 @@ docker run -it --rm \
     --name bench-script \
     -v "$PWD":/usr/src/myapp \
     -w /usr/src/myapp \
-    php:8.2-cli \
+    php:8.3-cli \
     php -dopcache.enable_cli=0 bench.php
-
-# Or... with ClearLinux php-fpm image:
-
-docker run -it --rm \
-    -v $PWD:/var/www/html \
-    clearlinux/php-fpm \
-    php -dopcache.enable_cli=0 /var/www/html/bench.php
 ```
 # Run the sergix44 script in Docker instead 
 
